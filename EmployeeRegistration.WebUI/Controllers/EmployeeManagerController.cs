@@ -1,4 +1,5 @@
-﻿using EmployeeRegistration.Core.Models;
+﻿using EmployeeRegistration.Core.Contracts;
+using EmployeeRegistration.Core.Models;
 using EmployeeRegistration.SQL;
 using System;
 using System.Collections.Generic;
@@ -10,11 +11,11 @@ namespace EmployeeRegistration.WebUI.Controllers
 {
     public class EmployeeManagerController : Controller
     {
-        SQLRepository<EmployeeDetail> context;
+        ISQLRepository<EmployeeDetail> context;
 
-        public EmployeeManagerController()
+        public EmployeeManagerController(ISQLRepository<EmployeeDetail> EmpDetails)
         {
-            context = new SQLRepository<EmployeeDetail>();
+            context = EmpDetails;
         }
         // GET: EmployeeManager
         public ActionResult Index()
