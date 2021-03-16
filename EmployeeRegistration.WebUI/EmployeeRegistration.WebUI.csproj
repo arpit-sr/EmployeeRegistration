@@ -171,6 +171,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\EmployeeManagerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -241,6 +242,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\EmployeeManager\" />
+    <Folder Include="Views\Employee\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -254,6 +257,23 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.5.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.5.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EmployeeRegistration.Core\EmployeeRegistration.Core.csproj">
+      <Project>{fa0c69dd-5ccf-40be-a233-fa0e70814081}</Project>
+      <Name>EmployeeRegistration.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EmployeeRegistration.Services\EmployeeRegistration.Services.csproj">
+      <Project>{382ea669-937a-465e-bd53-7e447e05db6d}</Project>
+      <Name>EmployeeRegistration.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EmployeeRegistration.SQL\EmployeeRegistration.SQL.csproj">
+      <Project>{2ad84318-b819-4527-a516-aa263d49844c}</Project>
+      <Name>EmployeeRegistration.SQL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
